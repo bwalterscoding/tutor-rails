@@ -1,4 +1,10 @@
 <p id="notice"><%= notice %></p>
 
+<h2 align=center>Student Name: <%= @class_report.student_name %></h2>
+<h4 align=center>Student Level: <%= @class_report.student_level %></h2>
+<h4 align=center>Class Notes: <%= @class_report.class_notes %></h2>
+
+
+
 <%= link_to 'Edit', edit_class_report_path(@class_report) %> |
 <%= link_to 'Back', class_reports_path %>
