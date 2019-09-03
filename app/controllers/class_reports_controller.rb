@@ -5,7 +5,7 @@ class ClassReportsController < ApplicationController
   # GET /class_reports
   # GET /class_reports.json
   def index
-    @class_reports = ClassReport.all
+    @class_report = current_user.class_reports
   end
 
   # GET /class_reports/1
@@ -26,7 +26,8 @@ class ClassReportsController < ApplicationController
   # POST /class_reports.json
   def create
     @class_report = ClassReport.new(class_report_params)
-
+    @class_report.user = current_user
+    
     respond_to do |format|
       if @class_report.save
         format.html { redirect_to @class_report, notice: 'Class report was successfully created.' }
@@ -70,6 +71,6 @@ class ClassReportsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def class_report_params
-      params.fetch(:class_report, {}).permit(:student_name, :student_level, :class_notes)
+      params.fetch(:class_report, {}).permit(:student_name, :student_level, :class_notes, :user_id)
     end
 end
