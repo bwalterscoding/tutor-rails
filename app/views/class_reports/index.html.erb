@@ -9,6 +9,7 @@
   <th>Class Notes</th>
   <th>User</th>
   <th>Earnings</th>
+  <th>Lesson Date</th>
  </tr>
  <% @class_report.each do |class_report| %>
  <tr>
@@ -17,6 +18,7 @@
   <td><%= class_report.class_notes %></td>
   <td><%= class_report.user_id %></td>
   <td><%= class_report.earnings %></td>
+  <td><%= class_report.created_at %></td>
   <td><%= link_to 'Edit', edit_class_report_path(class_report) %></td>
   <td><%= link_to 'Show', class_report_path(class_report) %></td>
   <td><%= link_to 'Delete', class_report_path(class_report), method: :delete, data: {confirm: "Are you sure?"} %></td>
