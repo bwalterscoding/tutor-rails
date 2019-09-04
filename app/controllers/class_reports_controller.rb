@@ -71,6 +71,6 @@ class ClassReportsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def class_report_params
-      params.fetch(:class_report, {}).permit(:student_name, :student_level, :class_notes, :user_id)
+      params.fetch(:class_report, {}).permit(:student_name, :student_level, :class_notes, :user_id, :earnings)
     end
 end
