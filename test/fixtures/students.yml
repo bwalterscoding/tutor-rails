@@ -1,0 +1,15 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  name: MyText
+  grade: 1
+  location: MyText
+  birthday: 2019-09-03
+  strength_weak: MyText
+
+two:
+  name: MyText
+  grade: 1
+  location: MyText
+  birthday: 2019-09-03
+  strength_weak: MyText
