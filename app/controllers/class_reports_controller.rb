@@ -12,6 +12,9 @@ class ClassReportsController < ApplicationController
   # GET /class_reports/1.json
   def show
   end
+  
+  def earnings
+  end
 
   # GET /class_reports/new
   def new
